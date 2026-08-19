@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="70">
+
+<h1>🎓 Student Performance Predictor</h1>
+<div class="student-card">
+    <h3>👨‍🎓 Student Details</h3>
+    <p><strong>Name:</strong> <span id="displayName">Student</span></p>
+    <p><strong>Department:</strong> CSBS</p>
+    <p><strong>College:</strong> S.A. Engineering College</p>
+</div>
+
+<p>AI Based Student Performance Analysis System</p>
+
+    <h1>AI Performance Prediction</h1>
+
+    <form onsubmit="return false;">
+       <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter Student Name">
+        <input type="number" id="attendance" placeholder="Attendance (%)" required>
+
+        <input type="number" id="marks" placeholder="Internal Marks" required>
+
+        <input type="number" id="gpa" placeholder="Semester GPA" step="0.01" required>
+
+        <button type="button" onclick="predictResult()">Predict</button>
+    </form>
+
+    <br>
+
+    <h3>Prediction Result</h3>
+    <p>Performance: <strong id="performance">--</strong></
+        p>
+    <p>Career Readiness: <strong id="career">--</strong></p>
+    <p>Grade: <strong id="grade">--</strong></p>
+    <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+</div>
+    <p>Total Predictions: <strong id="count">0</strong></p>
+    <input type="text" id="searchHistory" placeholder="Search history..." onkeyup="searchHistory()">
+    <h3>Prediction History</h3>
+    <h3>Performance Chart</h3>
+<canvas id="performanceChart" width="400" height="200"></canvas>
+<ul id="history"></ul>
+    <button onclick="clearHistory()">Clear History</button>
+    <br><br>
+    <button onclick="downloadReport()">Download Report</button>
+    <br><br>
+    <button onclick="downloadCSV()">Download CSV</button>
+    <br><br>
+    <button onclick="clearForm()">Reset Form</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
