@@ -9,7 +9,7 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return "Flask connected to MySQL successfully!"
+    return "AI Student Performance Predictor is running!"
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -25,6 +25,10 @@ def predict():
         performance = "Good"
     else:
         performance = "Poor"
+
+    return jsonify({
+      "performance": performance
+    })
 
     if gpa >= 8 and marks >= 80:
         careers = ["Software Developer", "AI/ML Engineer", "Data Scientist"]
