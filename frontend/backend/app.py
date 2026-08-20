@@ -6,12 +6,6 @@ from ai_model import predict_performance
 app = Flask(__name__)
 CORS(app)
 
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Student123!",
-    database="student_ai"
-)
 
 @app.route("/")
 def home():
