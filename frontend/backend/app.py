@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import mysql.connector
+
 from ai_model import predict_performance
 
 app = Flask(__name__)
